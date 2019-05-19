@@ -4,6 +4,8 @@ import MedicamentosForm from "./pages/MedicamentosForm";
 import MedicamentosList from "./pages/MedicamentosList";
 import MedicamentoDelete from "./pages/MedicamentosDelete";
 
+import Global from "./styles/global";
+
 export default function Routes() {
   return (
     <BrowserRouter>
@@ -14,6 +16,7 @@ export default function Routes() {
         <Route path="/Medicamento/edit/:id" component={MedicamentosForm} />
         <Route path="/Medicamento/delete/:id" component={MedicamentoDelete} />
       </Switch>
+      <Global />
     </BrowserRouter>
   );
 }

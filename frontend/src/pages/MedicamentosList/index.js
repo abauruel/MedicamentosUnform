@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import api from "../../services/api";
 import moment from "moment";
 
-// import { Container } from './styles';
+import { Container } from "./styles";
 
 export default function MedicamentosList() {
   const [medicamentos, setMedicamento] = useState([]);
@@ -16,8 +16,8 @@ export default function MedicamentosList() {
     getMedicamentos();
   }, []);
   return (
-    <>
-      <Link to={`/Medicamentos/create`}>Novo Medicamento</Link>
+    <Container>
+      <Link to={`/Medicamentos/create`}>&#x2b; Novo Medicamento</Link>
       <table>
         <thead>
           <tr>
@@ -48,6 +48,6 @@ export default function MedicamentosList() {
           ))}
         </tbody>
       </table>
-    </>
+    </Container>
   );
 }
