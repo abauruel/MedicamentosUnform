@@ -40,7 +40,9 @@ export default function MedicamentosList() {
                 <Link to={`/Medicamento/edit/${medicamento._id}`}>Editar</Link>
               </td>
               <td>
-                <Link to={`/medicamento/${medicamento._id}`}>Deletar </Link>
+                <Link to={`/Medicamento/delete/${medicamento._id}`}>
+                  Deletar
+                </Link>
               </td>
             </tr>
           ))}
