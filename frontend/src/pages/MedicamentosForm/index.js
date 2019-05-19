@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input } from "@rocketseat/unform";
-import axios from "../../services/api";
 import api from "../../services/api";
 import moment from "moment";
 import { Container } from "./styles";
@@ -26,7 +25,8 @@ export default function MedicamentosForm({ history, match }) {
   const [data, setData] = useState({});
 
   async function handleSubmit(data) {
-    await axios.post(`/medicamento/`, data);
+    const { id } = match.params;
+    await api.postOrPut(`/medicamento`, id, data);
 
     history.push("/medicamentos");
   }
